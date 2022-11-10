@@ -16,11 +16,16 @@ const Home = () => {
       author: "Handong",
       id: 3,
     },
+    { title: "My other website", body: "lorem ipsum...", author: "JiU", id: 4 },
   ]);
 
   return (
     <div className="home">
       <BlogList blogs={blogs} title="All blogs!" />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author === "JiU")}
+        title="JiU's blogs"
+      />
     </div>
   );
 };
